@@ -123,9 +123,16 @@
               "devServerTarget": "myshoppingsite:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "myshoppingsite"
+  "defaultProject": "myshoppingsite",
+  "cli": {
+    "analytics": "891aef6c-4bb8-4f4b-827d-82f99211d4e9"
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "shoppingsite-21462": {
+      "hosting": {
+        "myshoppingsite": [
+          "shoppingsite-21462"
+        ]
+      }
+    }
+  }
+}
