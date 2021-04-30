@@ -59,6 +59,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         component: CheckOutComponent,
       },
       {
+        path: 'my/orders',
+        component: MyOrdersComponent,
+      },
+      {
         path: 'order-success',
         component: OrderSuccessComponent,
       },
