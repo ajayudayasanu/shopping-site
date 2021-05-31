@@ -24,6 +24,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from './shared/services/auth.service';
 import { AuthGuard } from './shared/services/auth-guard.service';
 import { UserService } from './shared/services/user.service';
+import { AdminAuthGuard  } from './shared/services/admin-auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -79,16 +80,16 @@ import { UserService } from './shared/services/user.service';
       {
         path: 'admin/products',
         component: AdminProductsComponent,
-        canActivate: [AuthGuard],
+        canActivate: [AuthGuard, AdminAuthGuard],
       },
       {
         path: 'admin/orders',
         component: AdminOrdersComponent,
-        canActivate: [AuthGuard],
+        canActivate: [AuthGuard, AdminAuthGuard],
       },
     ]),
   ],
-  providers: [AuthService, AuthGuard, UserService],
+  providers: [AuthService, AuthGuard,AdminAuthGuard, UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
