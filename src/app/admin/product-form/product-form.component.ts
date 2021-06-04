@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/shared/services/category.service';
 
 @Component({
   selector: 'app-product-form',
   templateUrl: './product-form.component.html',
-  styleUrls: ['./product-form.component.scss']
+  styleUrls: ['./product-form.component.scss'],
 })
 export class ProductFormComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  categories$: any;
+  constructor(categoryService: CategoryService) {
+    this.categories$ = categoryService.getCategories();
   }
 
+  ngOnInit(): void {}
 }

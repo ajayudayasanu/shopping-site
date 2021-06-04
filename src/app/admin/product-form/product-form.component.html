@@ -17,6 +17,7 @@
     <label for="category">Category</label>
     <select id="category" type="number" class="form-control">
       <option value=""></option>
+      <option *ngFor="let c of categories$ |async " value="c.$key"> {{c.name }}</option>
     </select>
   </div>
   <!-- img URL -->
